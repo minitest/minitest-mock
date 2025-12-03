@@ -1,3 +1,9 @@
+=== 5.27.0? / ????-??-??
+
+* 1 major enhancement1:
+
+  * Extracted from minitest into an independent minitest-mock gem!
+
 === 5.26.2 / 2025-11-17
 
 * 5 bug fixes:
