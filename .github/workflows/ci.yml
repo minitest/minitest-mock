@@ -56,7 +56,7 @@ jobs:
           bundler: none
 
       - name: install hoe
-        run: gem install hoe -N
+        run: gem install hoe minitest -N
 
       - name: rake test
         run: |
