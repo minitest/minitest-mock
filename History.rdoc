@@ -1,3 +1,14 @@
+=== 5.27.0.beta.1 / 2025-12-11
+
+* 1 major enhancement:
+
+  * Extracted from minitest into an independent minitest-mock gem!
+
+# Historical Record:
+
+The rest of this document is here for historical purposes only. It
+reflects all of the changes to minitest, not just minitest/mock.rb.
+
 === 5.26.2 / 2025-11-17
 
 * 5 bug fixes:
