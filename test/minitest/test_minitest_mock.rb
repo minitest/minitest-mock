@@ -657,6 +657,14 @@ require_relative "metametameta"
 class TestMinitestStub < Minitest::Test
   # Do not parallelize since we're calling stub on class methods
 
+  # Measure how many assertions assert_operator actually makes.
+  # Minitest 6+ adds assert_respond_to inside assert_operator, so it counts as 2 assertions.
+  ASSERT_OPERATOR_COUNT = begin
+    tc = Minitest::Test.new "count"
+    tc.assert_operator 1, :==, 1
+    tc.assertions
+  end
+
   def setup
     super
     Minitest::Test.reset
@@ -677,7 +685,7 @@ class TestMinitestStub < Minitest::Test
   end
 
   def assert_stub val_or_callable
-    @assertion_count += 1
+    @assertion_count += ASSERT_OPERATOR_COUNT
 
     t = Time.now.to_i
 
@@ -689,7 +697,7 @@ class TestMinitestStub < Minitest::Test
   end
 
   def test_stub_private_module_method
-    @assertion_count += 1
+    @assertion_count += ASSERT_OPERATOR_COUNT
 
     t0 = Time.now
 
@@ -731,7 +739,7 @@ class TestMinitestStub < Minitest::Test
   end
 
   def test_stub_block_args
-    @assertion_count += 1
+    @assertion_count += ASSERT_OPERATOR_COUNT
 
     t = Time.now.to_i
 
