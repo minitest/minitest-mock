@@ -1,4 +1,5 @@
 require "minitest/autorun"
+require "minitest/mock"
 
 def with_kwargs_env
   ENV["MT_KWARGS_HAC\K"] = "1"
