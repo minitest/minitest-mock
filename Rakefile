@@ -1,7 +1,6 @@
 # -*- ruby -*-
 
 require "hoe"
-$:.unshift "lib" # to pick up lib/minitest/test_task.rb when minitest not installed
 
 Hoe.plugin :minitest, :history, :email # seattlerb - perforce
 Hoe.plugin :rdoc
