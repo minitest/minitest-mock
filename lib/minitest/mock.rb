@@ -8,7 +8,7 @@ module Minitest # :nodoc:
   # All mock objects are an instance of Mock
 
   class Mock
-    VERSION = "5.27.0.beta.1" # :nodoc:
+    VERSION = "5.27.0" # :nodoc:
 
     alias __respond_to? respond_to?
 
