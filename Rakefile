@@ -14,7 +14,7 @@ Hoe.spec "minitest-mock" do
 
   dependency "hoe-git2", "> 0", :dev
 
-  require_ruby_version ">= 3.1"
+  require_ruby_version ">= 3.2"
 end
 
 Minitest::TestTask.create :testW0 do |t|
