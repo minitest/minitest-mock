@@ -103,7 +103,7 @@ new non-existing method:
 
 == REQUIREMENTS:
 
-* Ruby 3+. No magic is involved. I hope.
+* Ruby 3.2+
 
 == INSTALL:
 
